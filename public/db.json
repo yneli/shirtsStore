@@ -1,0 +1,26 @@
+{
+    "shirts": [
+        {
+            "id": 1,
+            "imageUrl": "../img/tshirt1.png",
+            "name": "Streat-king",
+            "price": "T-shirt  Price ₽ 1.533,99 RUB",
+            "rating": 2
+        },
+        {
+            "id": 2,
+            "imageUrl": "../img/tshirt1.png",
+            "name": "Streat-king",
+            "price": "T-shirt  Price ₽ 1.533,99 RUB",
+            "rating": 2
+        },
+        {
+            "id": 3,
+            "imageUrl": "../img/tshirt1.png",
+            "name": "Streat-king",
+            "price": "T-shirt  Price ₽ 1.533,99 RUB",
+            "rating": 2
+        }
+       
+    ]
+}
