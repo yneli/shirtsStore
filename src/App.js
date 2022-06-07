@@ -6,17 +6,25 @@ import axios from 'axios';
 function App() {
   const [shirts, setShirts] = React.useState([]);
 
+
+  
+
+
   React.useEffect(() => {
-    axios.get('http://localhost:3000/db.json').then(({ data }) => {
-      setShirts(data.shirts);
+    const apiUrl = 'https://62961a4e810c00c1cb6f3657.mockapi.io/items';
+    axios.get(apiUrl).then((resp) => {
+      const allPersons = resp.data;
+      setShirts(allPersons);
     });
-  }, []);
+  }, [setShirts]);
+
+
 
   return (
     <div className="wrapper">
-      <Header></Header>
-      <Main></Main>
-      <Content items={shirts}></Content>
+      <Header items={shirts}></Header>
+      {/* <Main></Main> */}
+      {/* <Content items={shirts}></Content> */}
       <Footer></Footer>
     </div>
   );

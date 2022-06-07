@@ -1,25 +1,37 @@
-function Drawer() {
-    return ( 
+function Drawer({onClose, shirts, onRem}) {
+
+  
+  
+  
+  return ( 
 
       <div className="overlay">
         <div className="drawer">
           <div className="cart__drawer">
-            <div className="h2">Cart</div>
+            <h2>Cart</h2>
+            <img onClick={onClose}  width={25} height={25} src="/img/cancel.png" alt="Close" ></img>
           </div>
           <div className="items">
-          <div className="items__drawer">
-            <div className="items__image">
-              <img  height={70} src="./img/tshirt1.png" alt="" />
-            </div>
-            <div className="items__text">
-              <p>streat-shirt</p>
-              <b>1.533,99 RUB</b>
-            </div>
-            <div className="items__button">
-              <img src="./img/btn-remove.svg" alt="" />
-            </div>
-          </div>
+          
+          {shirts.map((obj) => (
+           <div className="items__drawer">
+           <div className="items__image">
+             <img  height={70} src={obj.imageUrl} alt="" />
+           </div>
+           <div className="items__text">
+             <p>{obj.name}</p>
+             <b>{obj.price}</b>
+           </div>
+           <div onClick={() => onRem(obj.id)} className="items__button">
+             <img  src="./img/btn-remove.svg" alt="" />
+           </div>
+           </div>
+          ))}
          
+
+
+
+
           </div>
           
           <div className="cartTotalBlock">

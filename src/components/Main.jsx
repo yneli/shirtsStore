@@ -4,6 +4,7 @@ import React from 'react'
 function Main() {
     return ( 
         <div className="main">
+         <div className="container">
        <div className="main__container">
          <div className="main__menu">
          
@@ -29,6 +30,7 @@ function Main() {
          
          <div className="main__img">
          <img width='700' height='343' src="../img/dudes.png" alt="" />
+       </div>
        </div>
        </div>
        </div>

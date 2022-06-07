@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Style the search field */
+  form.search input[type=text] {
+    padding-left: 8px;
+    font-size: 17px;
+    float: left;
+    width: 200px;
+    background: #F0C4FF;
+    border: none;
+  
+  }
+  form.search button {
+    float: left;
+    width: 30px;
+    height: 20px;
+    
+    
+    background: #F0C4FF;
+    color: black;
+    font-size: 17px;
+    border: none;
+    border-left: none; 
+    cursor: pointer;
+
+    
+  }
+  form.search button:hover {
+    background: #F0C4FF;
+  }
+  form.search::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  focus.middle:focus {
+    outline-width: 0;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+.search_input::placeholder{
+    color: black;
+    font-size: 17px;
+    font-family:  Century Gothic;
+  
+  }
