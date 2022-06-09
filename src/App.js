@@ -1,7 +1,9 @@
 import React from 'react';
 import './index.css';
-import { Main, Header, Content, Footer } from './components';
+import Home from './pages/Home.jsx'
+import About from './pages/About.jsx'
 import axios from 'axios';
+import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
   const [shirts, setShirts] = React.useState([]);
@@ -15,17 +17,22 @@ function App() {
     axios.get(apiUrl).then((resp) => {
       const allPersons = resp.data;
       setShirts(allPersons);
-    });
+     });
+
+     
+
+
   }, [setShirts]);
 
 
 
   return (
     <div className="wrapper">
-      <Header items={shirts}></Header>
-      {/* <Main></Main> */}
-      {/* <Content items={shirts}></Content> */}
-      <Footer></Footer>
+      <Routes>
+      <Route path="/" element={<Home items={shirts} />} />
+      <Route path="/about" element={<About items={shirts} />} />
+      </Routes>
+     
     </div>
   );
 }
